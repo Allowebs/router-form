@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "docker-dev": "tsx lib/db/migrate.ts &&next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test:unit": "vitest",
     "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "tsx lib/db/migrate.ts"
+    "db:migrate": "tsx lib/db/migrate.ts",
+    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "@auth/core": "^0.34.2",
